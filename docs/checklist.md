@@ -26,17 +26,17 @@ For code projects, always proceed as follows:
 
 ### .gitignore
 
-- [ ] The `.gitignore` file ignores all file patterns that are usually ignored in Python projects.
-- [ ] The `.gitignore` file also ignores the virtual environment.
-- [ ] The `.gitignore` file also ignores environment variable files (`.env` files), no matter whether they are named `.env`, `local.env`, `development.env`, or similar.
-  - [ ] The only exception to this rule is the file `example.env`.
+- [x] The `.gitignore` file ignores all file patterns that are usually ignored in Python projects.
+- [x] The `.gitignore` file also ignores the virtual environment.
+- [x] The `.gitignore` file also ignores environment variable files (`.env` files), no matter whether they are named `.env`, `local.env`, `development.env`, or similar.
+  - [ x] The only exception to this rule is the file `example.env`.
 
 ### README.md
 
-- [ ] The README starts with an H1 heading containing the repository or project name.
-- [ ] Right at the beginning, the README contains a description of the repository that is not too technical. The description has no more than 2-5 sentences.
-- [ ] A "Quickstart" section is part of the README. It briefly lists the prerequisites and describes how to get started quickly.
-- [ ] A "Usage" section describes advanced usage and the configuration of the application.
+- [x] The README starts with an H1 heading containing the repository or project name.
+- [x] Right at the beginning, the README contains a description of the repository that is not too technical. The description has no more than 2-5 sentences.
+- [x] A "Quickstart" section is part of the README. It briefly lists the prerequisites and describes how to get started quickly.
+- [x] A "Usage" section describes advanced usage and the configuration of the application.
 
 ### Django code
 
@@ -64,49 +64,49 @@ For code projects, always proceed as follows:
 
 ### requirements.txt
 
-- [ ] All package dependencies are listed in `requirements.txt`.
-- [ ] `requirements.txt` contains only packages with a pinned version.
+- [x] All package dependencies are listed in `requirements.txt`.
+- [x] `requirements.txt` contains only packages with a pinned version.
 
 ## 2. Code style
 
-- [ ] Your Python code follows PEP 8 as its code style standard. You can use a linting tool such as flake8 for this. More information:
-  - [ ] [PEP 8 Style Guide for Python](https://peps.python.org/pep-0008/)
-  - [ ] [Flake8 documentation](https://flake8.pycqa.org/en/latest/)
-- [ ] Follow these naming conventions:
-  - [ ] Class names -> PascalCase
-  - [ ] Variables -> snake_case
-- [ ] Your Python functions use type hints for parameters, return values, and variables.
-- [ ] Every function in your Python code has a docstring that describes what the function does, which parameters it accepts, and which return value to expect.
+- [x] Your Python code follows PEP 8 as its code style standard. You can use a linting tool such as flake8 for this. More information:
+  - [x] [PEP 8 Style Guide for Python](https://peps.python.org/pep-0008/)
+  - [x] [Flake8 documentation](https://flake8.pycqa.org/en/latest/)
+- [x] Follow these naming conventions:
+  - [x] Class names -> PascalCase
+  - [x] Variables -> snake_case
+- [x] Your Python functions use type hints for parameters, return values, and variables.
+- [x] Every function in your Python code has a docstring that describes what the function does, which parameters it accepts, and which return value to expect.
 
 ## 3. Documentation
 
 This section describes what we expect from the documentation of your project. The following items help you not to forget anything.
 
-- [ ] The language of the documentation (README and code comments) is **English**.
-- [ ] The documentation is written in complete sentences, for example in the README file of a repository.
-  - [ ] For longer documentation, create a separate `docs` folder in the repository that contains the documentation.
+- [x] The language of the documentation (README and code comments) is **English**.
+- [x] The documentation is written in complete sentences, for example in the README file of a repository.
+  - [x] For longer documentation, create a separate `docs` folder in the repository that contains the documentation.
 
 ## 4. Hints
 
 ### General hints
 
-- [ ] Set up and run your project in a virtual environment.
-- [ ] If you have questions or something is unclear, contact us via the ticket system.
-- [ ] You can use the official Django and Python documentation at any time. If you have questions about the documentation, send us a link to the relevant page.
-  - [ ] [Django documentation](https://docs.djangoproject.com/en/5.2/)
-  - [ ] [Python documentation](https://docs.python.org/3/)
-- [ ] Before you submit, start your application at least once on your own computer and test everything.
-- [ ] In addition to your GitHub repository, record and share a short Loom video (max. 5 minutes) in which you show your submission and present what you did. You do not have to mention every detail, but briefly explain and show all relevant steps.
-- [ ] The migrations for your changes are created and applied.
+- [x] Set up and run your project in a virtual environment.
+- [x] If you have questions or something is unclear, contact us via the ticket system.
+- [x] You can use the official Django and Python documentation at any time. If you have questions about the documentation, send us a link to the relevant page.
+  - [x] [Django documentation](https://docs.djangoproject.com/en/5.2/)
+  - [x] [Python documentation](https://docs.python.org/3/)
+- [x] Before you submit, start your application at least once on your own computer and test everything.
+- [x] In addition to your GitHub repository, record and share a short Loom video (max. 5 minutes) in which you show your submission and present what you did. You do not have to mention every detail, but briefly explain and show all relevant steps.
+- [x] The migrations for your changes are created and applied.
 
 ## 5. Testing
 
 Before you submit the project, make sure that you have tested the following:
 
-- [ ] Baby Tools World is reachable at `<YOUR_VM_IP>:8000`.
-- [ ] The application shows products and categories.
-  - [ ] On a product page, you can see more information about a product and its tags.
-- [ ] You can create new products, categories, and tags in the admin panel.
-- [ ] The comment field is cleared after submitting.
-- [ ] You can build your container image with the command from the README.
-- [ ] You can start the container by following the README and reach the application in the browser again.
+- [x] Baby Tools World is reachable at `<YOUR_VM_IP>:8000`.
+- [x] The application shows products and categories.
+  - [x] On a product page, you can see more information about a product and its tags.
+- [x] You can create new products, categories, and tags in the admin panel.
+- [x] The comment field is cleared after submitting.
+- [x] You can build your container image with the command from the README.
+- [x] You can start the container by following the README and reach the application in the browser again.
