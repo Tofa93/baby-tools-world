@@ -21,6 +21,7 @@ class Category(models.Model):
         ordering = ["name"]
         verbose_name_plural = "Categories"
 
+
 # NEW model Tag extension
 class Tag(models.Model):
 
@@ -35,7 +36,7 @@ class Tag(models.Model):
 class Product(models.Model):
 
     category = models.ForeignKey(Category, null=True, on_delete=models.DO_NOTHING)
-    tags = models.ManyToManyField(Tag, blank=True) # NEW Many-to-many relationship with Tag model
+    tags = models.ManyToManyField(Tag, blank=True)  # NEW Many-to-many relationship with Tag model
     description = models.TextField(max_length=250, null=True, blank=True)
     image = models.ImageField(upload_to="imgs/products/", null=True, blank=True)
     name = models.CharField(max_length=80, blank=False, null=False)

@@ -14,7 +14,6 @@ class CategoryAdmin(admin.ModelAdmin):
 class TagAdmin(admin.ModelAdmin):
     list_display = ("name", "created_at", "updated_at")
     search_fields = ("name",)
-    
 
 
 @admin.register(Product)
