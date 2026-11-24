@@ -1,12 +1,20 @@
 from django.contrib import admin
 
-from .models import Category, Comment, Product
+from .models import Category, Comment, Product, Tag
 
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug", "created_at")
     prepopulated_fields = {"slug": ("name",)}
+
+
+# NEW admin class for Tag model
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ("name", "created_at", "updated_at")
+    search_fields = ("name",)
+    
 
 
 @admin.register(Product)
