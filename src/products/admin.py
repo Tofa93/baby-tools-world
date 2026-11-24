@@ -12,6 +12,7 @@ class CategoryAdmin(admin.ModelAdmin):
 # NEW admin class for Tag model
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
+    """Configure tag management in the Django admin interface."""
     list_display = ("name", "created_at", "updated_at")
     search_fields = ("name",)
 
