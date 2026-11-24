@@ -24,12 +24,17 @@ class Category(models.Model):
 
 # NEW model Tag extension
 class Tag(models.Model):
-
+    """Represent a tag that can be assigned to products."""
     name = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
+        """Return the name of the tag.
+
+        Returns:
+            str: The name of the tag.
+        """
         return self.name
 
 
