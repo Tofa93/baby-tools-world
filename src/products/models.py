@@ -22,9 +22,26 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
 
+# NEW model Tag extension
+class Tag(models.Model):
+    """Represent a tag that can be assigned to products."""
+    name = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        """Return the name of the tag.
+
+        Returns:
+            str: The name of the tag.
+        """
+        return self.name
+
+
 class Product(models.Model):
 
     category = models.ForeignKey(Category, null=True, on_delete=models.DO_NOTHING)
+    tags = models.ManyToManyField(Tag, blank=True)  # NEW Many-to-many relationship with Tag model
     description = models.TextField(max_length=250, null=True, blank=True)
     image = models.ImageField(upload_to="imgs/products/", null=True, blank=True)
     name = models.CharField(max_length=80, blank=False, null=False)

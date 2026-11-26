@@ -1,5 +1,8 @@
+from itertools import product
+
 from django.contrib import messages
 from django.db.models import Avg, Count
+from django.http import request
 from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import CommentForm
@@ -57,15 +60,26 @@ def product_detail(request, category_slug, pk):
                 comment.save()
                 messages.success(request, "Thank you for your rating.")
 
+            request.session["clear_review_form_for_product"] = product.pk
+
             return redirect("product_detail", category_slug=category_slug, pk=product.pk)
     else:
+        if request.session.get("clear_review_form_for_product") == product.pk:
+            request.session.pop("clear_review_form_for_product", None)
+            form = CommentForm()
+        else:
         # Pre-fill form for authenticated user with existing comment (if any)
-        initial = {}
-        if request.user.is_authenticated:
-            existing = product.comments.filter(user=request.user).first()
-            if existing:
-                initial = {"rating": existing.rating, "text": existing.text}
-        form = CommentForm(initial=initial)
+            initial = {}
+            if request.user.is_authenticated:
+                existing = product.comments.filter(user=request.user).first()
+                if existing:
+                    initial = {
+                        "rating": existing.rating, 
+                        "text": existing.text,
+                    }
+
+            form = CommentForm(initial=initial)
+
 
     return render(
         request,
